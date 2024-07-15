@@ -1,0 +1,15 @@
+
+<div class="card marge" style="width: 30rem;">
+<p class="titre"><b>{{ book.title }}</b></p>
+<p>par : <b>{{ book.author.FirstName }} {{ book.author.LastName }}</b></p>
+<br>
+<p><U>4ème de couverture</U> : {{ book.coverText }}</p>
+<p><U>Commentaire</U> : {{ book.comment }}</p>
+
+<div class="ligne">
+
+  <button routerLink="/books/{{book.id}}" style="width: 9rem;">Modifier</button>
+  <button style="width: 9rem;" (click)="deleteLivre()">Supprimer</button>
+
+</div>
+</div>

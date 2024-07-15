@@ -1,0 +1,13 @@
+<h2>Liste des auteurs</h2>
+
+<button routerLink="/creerauteur">Ajouter un(e) nouvel(le) auteur(e)</button>
+
+<div class="liste">
+
+  @for (auteur of auteurs; track $index) {
+    <div class="card" style="width: 18rem;">
+      <app-detail-author [auteur]="auteur"></app-detail-author>
+    </div>
+  }
+
+</div>

@@ -1,0 +1,21 @@
+<form [formGroup]="authorCreate">
+
+  <div>
+    <label for="LastName">Nom de l'auteur : </label>
+    <input type="text" id="LastName" formControlName="LastName">
+    @if(validation && form['LastName'].invalid){
+      <span>Prénom invalid</span>
+    }
+  </div>
+
+  <div>
+    <label for="FirstName">Prénom de l'auteur : </label>
+    <input type="text" id="FirstName" formControlName="FirstName">
+    @if(validation && form['FirstName'].invalid){
+      <span>Prénom invalid</span>
+    }
+  </div>
+
+  <button type="submit" (click)="createAuthor()">Nouvel(le) Auteur(e)</button>
+
+</form>

@@ -1,0 +1,12 @@
+
+<div>
+
+  <p><b>Nom de l'auteur : </b>{{ auteur.FirstName }}</p>
+  <br>
+  <p><b>Prénom de l'auteur : </b>{{ auteur.LastName }}</p>
+  <div class="ligne">
+    <button routerLink="/auteurs/{{auteur.id}}" style="width: 9rem;">Modifier</button>
+    <button (click)="deleteAuteur()" style="width: 9rem;">Supprimer</button>
+  </div>
+
+</div>

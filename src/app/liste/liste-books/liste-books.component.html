@@ -1,0 +1,14 @@
+
+<div>
+
+  <button routerLink="/creerlivre">Ajouter un nouveau livre</button>
+
+<div class="liste">
+
+  @for (livre of livres; track $index) {
+    <app-detail-book [book]="livre"></app-detail-book>
+  }
+
+</div>
+
+</div>
