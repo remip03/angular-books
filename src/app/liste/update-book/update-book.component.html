@@ -1,1 +1,40 @@
-<p>update-book works!</p>
+
+<form [formGroup]="bookUpdate">
+
+    <div class="colonne marge">
+        <label for="title">Titre du livre : </label>
+        <input type="text" id="title" formControlName="title">
+        @if(validation && form['title'].invalid){
+          <span>titre invalide</span>
+        }
+      </div>
+    
+      <div class="colonne marge">
+        <label for="coverText">4ème de couverture : </label>
+        <input type="text" id="coverText" formControlName="coverText">
+        @if(validation && form['coverText'].invalid){
+          <span>Non valide</span>
+        }
+      </div>
+    
+      <div class="colonne marge">
+        <label for="comment">Commentaire du bili bio tech care : </label>
+        <input type="text" id="comment" formControlName="comment">
+        @if(validation && form['comment'].invalid){
+          <span>Non valide</span>
+        }
+      </div>
+
+      <div class="colonne marge">
+        <label for="authors">Qui l'a écrit ?</label>
+        <select id="authors" formControlName="idAuthor">
+          <option value="" disabled selected>Choisir l'auteur(e)</option>
+          @for (auteur of authors; track $index) {
+            <option [value]="auteur.id">{{auteur.FirstName}} {{auteur.LastName}}</option>
+          }
+        </select>
+      </div>
+
+      <button type="submit" (click)="changeBook()">Enregistrer les modifications</button>
+
+</form>

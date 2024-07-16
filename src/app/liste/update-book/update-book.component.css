@@ -1,0 +1,9 @@
+button{
+    width: auto;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: maroon;
+    color: oldlace;
+    border-radius: 2rem;
+    margin: 2%;
+  }
